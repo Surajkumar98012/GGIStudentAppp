@@ -15,108 +15,134 @@
         android:layout_marginEnd="16dp"
 
         android:layout_marginBottom="16dp"
-        android:fontFamily="@font/roboto_bold"
+        android:fontFamily="@font/domine"
         android:gravity="center"
         android:text="Verification"
+        android:textColor="#000000"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintBottom_toTopOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+        app:layout_constraintStart_toStartOf="@+id/guideline9" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="16dp"
         android:foregroundGravity="center_vertical"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/verificationpng" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/muli"
         android:gravity="center"
         android:text="Enter the Phone Number assocated  with this account"
         android:textColor="#201F1F"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
-    <com.mukesh.OtpView
-        android:id="@+id/otp_view"
+    <com.chaos.view.PinView
+        android:id="@+id/firstPinView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:gravity="center|center_horizontal"
-        android:inputType="textPostalAddress"
-        android:itemBackground="#ffff"
-        android:textColor="@android:color/black"
-        app:OtpItemCount="4"
-        app:OtpItemSpacing="20dp"
-        app:OtpLineColor="#CEFDFD"
-        app:OtpViewType="line"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:cursorVisible="true"
+        android:hint="12345"
+        android:inputType="text"
+        android:itemBackground="@android:color/darker_gray"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cursorColor="@color/black"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="true"
+        app:itemCount="5"
+        app:itemHeight="48dp"
+        app:itemRadius="4dp"
+        app:itemSpacing="0dp"
+        app:itemWidth="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.025" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/registerbutton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/muli"
-            android:gravity="center|end"
-            android:text="If you didn’t recieve a code ! "
-            android:textColor="#201F1F"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_weight="2"
-            android:fontFamily="@font/muli"
-            android:gravity="center|start"
-            android:text="Resend"
-            android:textColor="#F44336"
-            android:textSize="16sp" />
-    </LinearLayout>
+        app:lineColor="@color/black"
+        app:lineWidth="2dp"
+        app:viewType="rectangle" />
 
     <Button
         android:id="@+id/registerbutton"
         android:layout_width="151dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/rectangle_5"
         android:gravity="center|center_horizontal"
         android:text="Send"
         app:backgroundTint="@color/white"
         app:backgroundTintMode="multiply"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/CardAnnouncement"
+        app:layout_constraintTop_toBottomOf="@+id/CardAnnouncement" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_weight="2"
+        android:fontFamily="@font/muli"
+        android:gravity="center|start"
+        android:text="Resend"
+        android:textColor="#F44336"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/CardAnnouncement"
+        app:layout_constraintTop_toBottomOf="@+id/firstPinView" />
+
+    <TextView
+        android:id="@+id/CardAnnouncement"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/muli"
+        android:gravity="center|end"
+        android:text="If you didn’t recieve a code ! "
+        android:textColor="#201F1F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstPinView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

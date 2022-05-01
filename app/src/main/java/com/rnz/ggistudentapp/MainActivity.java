@@ -25,17 +25,17 @@ startActivity(intent);
             }
         });
         TextView signup;
-        signup = findViewById(R.id.signup2);
+        signup = findViewById(R.id.button6);
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signuppage = new Intent(MainActivity.this,registration.class);
+                Intent signuppage = new Intent(MainActivity.this,Home.class);
                 startActivity(signuppage);
             }
         });
 
 
 
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
     }
 }
