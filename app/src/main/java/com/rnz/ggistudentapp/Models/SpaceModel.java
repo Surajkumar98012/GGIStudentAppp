@@ -1,45 +1,29 @@
 package com.rnz.ggistudentapp.Models;
 
+import android.widget.ImageView;
+import android.widget.TextView;
+
 public class SpaceModel {
-    int image;
-
-    public SpaceModel(int image) {
-        this.image = image;
-
+    int cardimage;
+   String cardtitle;
+    public SpaceModel(int cardimage, String cardtitle) {
+        this.cardimage = cardimage;
+        this.cardtitle = cardtitle;
     }
 
-    public int getImage() {
-        return image;
+    public int getCardimage() {
+        return cardimage;
     }
 
-/*    public void setDate(String date) {
-        this.date = date;
+    public void setCardimage(int cardimage) {
+        this.cardimage = cardimage;
     }
 
-    public String getBatch() {
-        return batch;
+    public String getCardtitle() {
+        return cardtitle;
     }
 
-    public void setBatch(String batch) {
-        this.batch = batch;
-    }*/
-
- /*   public String getImage() {
-        return announcementtitle;
-    }*/
-
-/*    public void setAnnouncementtitle(String announcementtitle) {
-        this.announcementtitle = announcementtitle;
-    }*/
-
- /*   public String getAnnouncement() {
-        return announcement;
-    }*/
-
-    public void setImage(int image) {
-        this.image = image;
+    public void setCardtitle(String cardtitle) {
+        this.cardtitle = cardtitle;
     }
 }
-
-
-

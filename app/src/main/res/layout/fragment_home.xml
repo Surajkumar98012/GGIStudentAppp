@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C6DCF9FD"
     tools:context=".HomeFragment">
 
     <androidx.constraintlayout.widget.Guideline
@@ -35,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_weight="1"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@drawable/facebook" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -48,7 +49,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hi Suraj"
-                android:textColor="#0B0B0B" />
+                android:textColor="#000000"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -59,9 +61,13 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="383dp"
-        android:layout_height="422dp"
+        android:layout_width="377dp"
+        android:layout_height="388dp"
         android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#ffff"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -79,9 +85,14 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="383dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="500dp"
+        android:layout_width="376dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="450dp"
+        app:cardBackgroundColor="#FCFFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline13"
         app:layout_constraintStart_toStartOf="@+id/guideline12"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">

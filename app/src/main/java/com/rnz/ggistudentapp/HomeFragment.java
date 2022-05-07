@@ -1,5 +1,7 @@
 package com.rnz.ggistudentapp;
 
+
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Space;
 
 import com.rnz.ggistudentapp.Adapters.AnnouncementAdapter;
 import com.rnz.ggistudentapp.Adapters.SpaceAdapter;
@@ -77,13 +78,26 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         // Inflate the layout for this fragment
-         recyclerView = view.findViewById(R.id.homerecycler1);
-//        recyclerView1 = view.findViewById(R.id.homerecycler1);
-        ArrayList<SpaceModel> horizontallist = new ArrayList<>();
-        horizontallist.add(new SpaceModel(R.drawable.fb));
-        horizontallist.add(new SpaceModel(R.drawable.gp));
-        horizontallist.add(new SpaceModel(R.drawable.logpng));
-         ArrayList<AnnouncementModel> list = new ArrayList<>();
+
+         recyclerView = view.findViewById(R.id.homerecycler);
+     recyclerView1 = view.findViewById(R.id.homerecycler1);
+    ArrayList<SpaceModel> horizontallist = new ArrayList<>();
+
+//        horizontallist.add(new SpaceModel(R.drawable.fb));
+//        horizontallist.add(new SpaceModel(R.drawable.gp));
+//        horizontallist.add(new SpaceModel(R.drawable.logpng));
+/*        horizontallist.add(new SpaceModel(12, "test 1"));
+        horizontallist.add(new SpaceModel(12, "test 2"));
+        horizontallist.add(new SpaceModel(12, "test 3"));
+        horizontallist.add(new SpaceModel(12, "test 4"));*/
+        horizontallist.add(new SpaceModel(R.drawable.notes,"Notes"));
+        horizontallist.add(new SpaceModel(R.drawable.exam,"Previous Paper"));
+        horizontallist.add(new SpaceModel(R.drawable.doubt,"Ask doubt"));
+        horizontallist.add(new SpaceModel(R.drawable.ic_add,"Add"));
+
+
+        ArrayList<AnnouncementModel> list = new ArrayList<>();
+
          list.add(new AnnouncementModel("22/22/2222","C6","Leave Notice","This is the announcement for c6 batch that our college is going to be shutting down soon"));
         list.add(new AnnouncementModel("22/22/2222","C6","Leave Notice","This is the announcement for c6 batch that our college is going to be shutting down soon"));
         list.add(new AnnouncementModel("22/22/2222","C6","Leave Notice","This is the announcement for c6 batch that our college is going to be shutting down soon"));
@@ -95,9 +109,11 @@ public class HomeFragment extends Fragment {
         list.add(new AnnouncementModel("22/22/2222","C6","Leave Notice","This is the announcement for c6 batch that our college is going to be shutting down soon"));
 
         recyclerView.setHasFixedSize(true);
-        recyclerView1.setHasFixedSize(true);
+ recyclerView1.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-    recyclerView1.setLayoutManager(new LinearLayoutManager(view.getContext()));
+   recyclerView1.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        recyclerView1.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,
+                false));
  recyclerView.setAdapter(new AnnouncementAdapter(list,getContext()));
         recyclerView1.setAdapter(new SpaceAdapter(horizontallist,getContext()));
         return view;
