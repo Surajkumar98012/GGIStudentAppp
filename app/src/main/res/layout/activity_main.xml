@@ -78,8 +78,22 @@
             android:layout_height="match_parent"
             android:layout_gravity="center">
 
+            <TextView
+                android:id="@+id/tvRegisterHere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register here"
+                android:textColor="#8999E3"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button5"
+                app:layout_constraintHorizontal_bias="0.227"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView24"
+                app:layout_constraintVertical_bias="0.455" />
+
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/registeremail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -95,7 +109,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
             <EditText
-                android:id="@+id/editTextTextPassword3"
+                android:id="@+id/registerpassword"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
                 android:layout_marginTop="16dp"
@@ -123,10 +137,10 @@
                 android:text="Forget Password"
                 android:textColor="#8999E3"
                 app:backgroundTint="#ffff"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword3"
+                app:layout_constraintEnd_toEndOf="@+id/registerpassword"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPassword3"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+                app:layout_constraintStart_toStartOf="@+id/registerpassword"
+                app:layout_constraintTop_toBottomOf="@+id/registerpassword" />
 
             <TextView
                 android:id="@+id/textView18"
@@ -143,7 +157,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/login"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -154,7 +168,7 @@
                 app:backgroundTintMode="multiply"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/button5"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPassword3"
+                app:layout_constraintStart_toStartOf="@+id/registerpassword"
                 app:layout_constraintTop_toBottomOf="@+id/button5" />
 
             <TextView
@@ -166,10 +180,10 @@
                 android:gravity="center_vertical"
                 android:text="Password"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+                app:layout_constraintEnd_toEndOf="@+id/registeremail"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
-                app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+                app:layout_constraintStart_toStartOf="@+id/registeremail"
+                app:layout_constraintTop_toBottomOf="@+id/registeremail" />
 
             <TextView
                 android:id="@+id/textView17"

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "444981647574",
+    "project_id": "ggi-student-app",
+    "storage_bucket": "ggi-student-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444981647574:android:828624e24aba46a6849177",
+        "android_client_info": {
+          "package_name": "com.rnz.ggistudentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444981647574-ctgtug2erc90t2ih7qgn1pud5duh91k5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnA7W1L6ihhDM9WO3ZP7HiOuFg2Fwu6Vc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444981647574-ctgtug2erc90t2ih7qgn1pud5duh91k5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

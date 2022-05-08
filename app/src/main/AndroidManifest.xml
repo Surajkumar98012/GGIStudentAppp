@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rnz.ggistudentapp">
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -9,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GGIStudentApp">
-        <activity android:name=".Home"></activity>
+        <activity
+            android:name=".Regestration"
+            android:exported="false" />
+        <activity android:name=".Home" />
         <activity
             android:name=".NavigationBar"
             android:label="@string/title_activity_navigation_bar" />
