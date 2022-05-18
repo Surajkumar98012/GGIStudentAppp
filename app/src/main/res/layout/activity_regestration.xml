@@ -45,7 +45,7 @@ tools:context=".Regestration">
     app:layout_constraintHorizontal_bias="0.416"
     app:layout_constraintStart_toStartOf="@+id/guideline4"
     app:layout_constraintTop_toTopOf="parent"
-    app:srcCompat="@drawable/logpng" />
+    app:srcCompat="@drawable/global" />
 
 <androidx.constraintlayout.widget.Guideline
     android:id="@+id/guideline4"
@@ -84,14 +84,13 @@ tools:context=".Regestration">
             android:layout_height="wrap_content"
             android:text="Login here"
             android:textColor="#8999E3"
-            android:textSize="16sp"
-
+            android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button5"
-            app:layout_constraintHorizontal_bias="0.203"
+            app:layout_constraintHorizontal_bias="0.232"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView24"
-            app:layout_constraintVertical_bias="0.454" />
+            app:layout_constraintVertical_bias="0.444" />
 
         <EditText
             android:id="@+id/registeremail"
@@ -129,12 +128,11 @@ tools:context=".Regestration">
             android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="39dp"
-
-
             android:layout_marginTop="16dp"
             android:background="#ffff"
             android:fontFamily="@font/roboto"
             android:gravity="center|right"
+            android:visibility="invisible"
             android:text="Forget Password"
             android:textColor="#8999E3"
             app:backgroundTint="#ffff"
@@ -152,7 +150,7 @@ tools:context=".Regestration">
             android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto"
             android:gravity="center_vertical"
-            android:text="Username"
+            android:text="Email"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="@+id/textView17"
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -165,6 +163,7 @@ tools:context=".Regestration">
             android:layout_marginBottom="30dp"
             android:background="@drawable/rectangle_5"
             android:text="Sign up"
+            android:textSize="13sp"
             app:backgroundTint="@color/white"
             app:backgroundTintMode="multiply"
             app:layout_constraintBottom_toBottomOf="parent"

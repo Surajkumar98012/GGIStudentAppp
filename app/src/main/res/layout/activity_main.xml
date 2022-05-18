@@ -45,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logpng" />
+        app:srcCompat="@drawable/global" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -90,7 +90,7 @@
                 app:layout_constraintHorizontal_bias="0.227"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView24"
-                app:layout_constraintVertical_bias="0.455" />
+                app:layout_constraintVertical_bias="0.449" />
 
             <EditText
                 android:id="@+id/registeremail"
@@ -151,7 +151,7 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/roboto"
                 android:gravity="center_vertical"
-                android:text="Username"
+                android:text="Email"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView17"
                 app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -164,6 +164,7 @@
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/rectangle_5"
                 android:text="Login"
+                android:textSize="13sp"
                 app:backgroundTint="@color/white"
                 app:backgroundTintMode="multiply"
                 app:layout_constraintBottom_toBottomOf="parent"

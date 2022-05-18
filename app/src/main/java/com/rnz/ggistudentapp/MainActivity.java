@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
-                        Toast.makeText(MainActivity.this, "User logged in successfully", Toast.LENGTH_SHORT).show();
+                       /* Toast.makeText(MainActivity.this, "User logged in successfully", Toast.LENGTH_SHORT).show();*/
                         Intent signuppage = new Intent(MainActivity.this,Home.class);
                         startActivity(signuppage);
                     }else{
