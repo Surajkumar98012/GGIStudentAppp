@@ -13,13 +13,16 @@
         android:theme="@style/Theme.GGIStudentApp">
         <activity
             android:name=".YourQuestions"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Related"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ReplyActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CreateProfile"
             android:exported="false"
@@ -35,13 +38,13 @@
         <activity
             android:name=".Home"
             android:screenOrientation="portrait" />
-        <activity
+<!--        <activity
             android:name=".NavigationBar"
-            android:label="@string/title_activity_navigation_bar" />
+            android:label="@string/title_activity_navigation_bar" />-->
         <activity
             android:name=".resetpassword"
             android:screenOrientation="portrait" />
-        <activity android:name=".registration" />
+       <!-- <activity android:name=".registration" />-->
         <activity
             android:name=".verification_code"
             android:screenOrientation="portrait" />
@@ -50,7 +53,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
