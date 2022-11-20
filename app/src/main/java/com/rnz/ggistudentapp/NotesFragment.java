@@ -3,10 +3,18 @@ package com.rnz.ggistudentapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.rnz.ggistudentapp.Adapters.SpaceAdapter;
+import com.rnz.ggistudentapp.Models.SpaceModel;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,7 +22,7 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class NotesFragment extends Fragment {
-
+    private RecyclerView recyclerView1;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,6 +67,31 @@ public class NotesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_blank, container, false);
+        ArrayList<SpaceModel> horizontallist = new ArrayList<>();
+
+        recyclerView1 = view.findViewById(R.id.homerecycler1);
+        horizontallist.add(new SpaceModel(R.drawable.notes,"subject1"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"subject1"));
+        horizontallist.add(new SpaceModel(R.drawable.exam,"subject1 subject1"));
+        horizontallist.add(new SpaceModel(R.drawable.doubt,"subject1 subject1"));
+        horizontallist.add(new SpaceModel(R.drawable.ic_add,"subject1"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"subject1"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"subject1"));
+        horizontallist.add(new SpaceModel(R.drawable.exam,"subject1 subject1"));
+        horizontallist.add(new SpaceModel(R.drawable.doubt,"subject1 subject1"));
+        horizontallist.add(new SpaceModel(R.drawable.ic_add,"subject1"));
+
+
+        recyclerView1.setHasFixedSize(true);
+        recyclerView1.setLayoutManager(new LinearLayoutManager(view.getContext()));
+
+//        GridLayoutManager layoutManager=new GridLayoutManager(this,2);
+        recyclerView1.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        recyclerView1.setAdapter(new SpaceAdapter(horizontallist,getContext()));
+        return view;
+
+//        return inflater.inflate(R.layout.fragment_blank, container, false);
     }
 }
