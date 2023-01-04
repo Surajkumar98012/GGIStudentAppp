@@ -72,16 +72,16 @@ public class NotesFragment extends Fragment {
         ArrayList<SpaceModel> horizontallist = new ArrayList<>();
 
         recyclerView1 = view.findViewById(R.id.homerecycler1);
-        horizontallist.add(new SpaceModel(R.drawable.notes,"subject1"));
-        horizontallist.add(new SpaceModel(R.drawable.notes,"subject1"));
-        horizontallist.add(new SpaceModel(R.drawable.exam,"subject1 subject1"));
-        horizontallist.add(new SpaceModel(R.drawable.doubt,"subject1 subject1"));
-        horizontallist.add(new SpaceModel(R.drawable.ic_add,"subject1"));
-        horizontallist.add(new SpaceModel(R.drawable.notes,"subject1"));
-        horizontallist.add(new SpaceModel(R.drawable.notes,"subject1"));
-        horizontallist.add(new SpaceModel(R.drawable.exam,"subject1 subject1"));
-        horizontallist.add(new SpaceModel(R.drawable.doubt,"subject1 subject1"));
-        horizontallist.add(new SpaceModel(R.drawable.ic_add,"subject1"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"DBMS"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"DSA"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"Operating System"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"Computer Network"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"Machine Learning"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"compiler Design"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"FLAT"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"ERP"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"Software Engineering"));
+        horizontallist.add(new SpaceModel(R.drawable.notes,"Computer Architecture"));
 
 
         recyclerView1.setHasFixedSize(true);

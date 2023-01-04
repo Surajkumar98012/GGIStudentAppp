@@ -56,7 +56,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Check Some latest news" />
+                android:text="Check Some latest notice" />
         </LinearLayout>
     </LinearLayout>
 
@@ -82,6 +82,12 @@
             android:id="@+id/homerecycler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/progressBar"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
