@@ -4,9 +4,33 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SpaceModel {
-    int cardimage;
-   String cardtitle;
-    public SpaceModel(int cardimage, String cardtitle) {
+    private String notesTitle,pdfUrl;
+
+    public SpaceModel() {
+    }
+
+    public SpaceModel(String notesTitle, String pdfUrl) {
+        this.notesTitle = notesTitle;
+        this.pdfUrl = pdfUrl;
+    }
+
+    public String getnotesTitle() {
+        return notesTitle;
+    }
+
+    public void setnotesTitle(String notesTitle) {
+        this.notesTitle = notesTitle;
+    }
+
+    public String getPdfUrl() {
+        return pdfUrl;
+    }
+
+    public void setPdfUrl(String pdfUrl) {
+        this.pdfUrl = pdfUrl;
+    }
+
+    /*    public SpaceModel(int cardimage, String cardtitle) {
         this.cardimage = cardimage;
         this.cardtitle = cardtitle;
     }
@@ -25,5 +49,5 @@ public class SpaceModel {
 
     public void setCardtitle(String cardtitle) {
         this.cardtitle = cardtitle;
-    }
+    }*/
 }

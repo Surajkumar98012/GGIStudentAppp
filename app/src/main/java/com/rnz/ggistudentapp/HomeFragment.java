@@ -5,6 +5,7 @@ package com.rnz.ggistudentapp;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,18 +13,30 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.rnz.ggistudentapp.Adapters.NoticeAdapter;
 import com.rnz.ggistudentapp.Adapters.NoticeData;
 import com.rnz.ggistudentapp.Adapters.SpaceAdapter;
+import com.rnz.ggistudentapp.Adapters.modelAdapter;
 import com.rnz.ggistudentapp.Models.SpaceModel;
+import com.rnz.ggistudentapp.Models.model;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -38,6 +51,9 @@ public class HomeFragment extends Fragment {
     private NoticeAdapter adapter;
     private DatabaseReference reference;
     private RecyclerView recyclerView1,deleteNoticeRecycler;
+
+    ImageView imageView;
+    TextView nameEt;
 /*
 
     // TODO: Rename parameter arguments, choose names that match
@@ -110,12 +126,11 @@ public class HomeFragment extends Fragment {
 
 
 
-        ArrayList<SpaceModel> horizontallist = new ArrayList<>();
+        ArrayList<model> horizontallist = new ArrayList<>();
 
-        horizontallist.add(new SpaceModel(R.drawable.notes,"Notes"));
-        horizontallist.add(new SpaceModel(R.drawable.exam,"Previous Paper"));
-        horizontallist.add(new SpaceModel(R.drawable.doubt,"Ask doubt"));
-        horizontallist.add(new SpaceModel(R.drawable.ic_add,"Add"));
+        horizontallist.add(new model(R.drawable.notes,"Notes"));
+        horizontallist.add(new model(R.drawable.exam,"MST Paper"));
+        horizontallist.add(new model(R.drawable.doubt,"Ask doubt"));
 
         recyclerView1.setHasFixedSize(true);
 
@@ -123,7 +138,7 @@ public class HomeFragment extends Fragment {
         recyclerView1.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,
                 false));
 
-        recyclerView1.setAdapter(new SpaceAdapter(horizontallist,getContext()));
+        recyclerView1.setAdapter(new modelAdapter(horizontallist,getContext()));
 
 
 
@@ -137,14 +152,47 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-    private void getNotice() {
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        imageView = getActivity().findViewById(R.id.avatar);
+        nameEt = getActivity().findViewById(R.id.greet);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String currentuid = user.getUid();
+        DocumentReference docreference;
+        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+
+        docreference = firestore.collection("user").document(currentuid);
+
+        docreference.get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+
+                            String nameResult = task.getResult().getString("name");
+                            String url = task.getResult().getString("url");
+
+                            Picasso.get().load(url).into(imageView);
+                            nameEt.setText(nameResult);
+
+                    }});
+    }
+
+        private void getNotice() {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 list=new ArrayList<>();
                 for (DataSnapshot snapshot1: snapshot.getChildren()){
                     NoticeData data=snapshot1.getValue(NoticeData.class);
-                    list.add(data);
+                    list.add(0,data);
                 }
                 adapter=new NoticeAdapter(getContext(),list);
                 adapter.notifyDataSetChanged();
