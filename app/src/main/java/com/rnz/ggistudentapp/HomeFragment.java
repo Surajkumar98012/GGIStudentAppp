@@ -129,7 +129,7 @@ public class HomeFragment extends Fragment {
         ArrayList<model> horizontallist = new ArrayList<>();
 
         horizontallist.add(new model(R.drawable.notes,"Notes"));
-        horizontallist.add(new model(R.drawable.exam,"MST Paper"));
+        horizontallist.add(new model(R.drawable.img,"MST Paper"));
         horizontallist.add(new model(R.drawable.doubt,"Ask doubt"));
 
         recyclerView1.setHasFixedSize(true);

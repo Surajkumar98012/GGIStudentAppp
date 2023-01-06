@@ -1,15 +1,20 @@
 package com.rnz.ggistudentapp.Adapters;
 
     import android.content.Context;
-import android.view.LayoutInflater;
+    import android.content.Intent;
+    import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rnz.ggistudentapp.Models.model;
-import com.rnz.ggistudentapp.R;
+    import com.rnz.ggistudentapp.AskActivity;
+    import com.rnz.ggistudentapp.ChatFragment;
+    import com.rnz.ggistudentapp.Models.model;
+    import com.rnz.ggistudentapp.MstActivity;
+    import com.rnz.ggistudentapp.NotesFragment;
+    import com.rnz.ggistudentapp.R;
 
 import java.util.ArrayList;
 
@@ -36,6 +41,27 @@ import java.util.ArrayList;
 
             holder.cardimage.setImageResource(model.getCardimage());
             holder.cardtitle.setText((CharSequence) model.getCardtitle());
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    switch (position){
+/*                        case 0:
+                            Intent intent= new Intent(context, NotesFragment.class);
+                            context.startActivity(intent);
+                            break;*/
+                        case 1:
+                            Intent intent1= new Intent(context, MstActivity.class);
+                            context.startActivity(intent1);
+                            break;
+/*                        case 2:
+                            Intent intent2= new Intent(context, ChatFragment.class);
+                            context.startActivity(intent2);
+                            break;*/
+                    }
+
+                }
+            });
         }
 
         @Override

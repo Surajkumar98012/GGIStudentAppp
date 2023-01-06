@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GGIStudentApp">
         <activity
+            android:name=".MstActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".fullimageView"
             android:exported="false">
             <meta-data

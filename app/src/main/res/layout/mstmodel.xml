@@ -27,7 +27,7 @@
 
 
             <ImageView
-                android:id="@+id/CardImage"
+                android:id="@+id/mstCardImage"
                 android:layout_width="110dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
@@ -36,10 +36,10 @@
                 app:layout_constraintHorizontal_bias="0.416"
                 app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/pdf1" />
+                app:srcCompat="@drawable/img" />
 
             <TextView
-                android:id="@+id/spacecardtitle"
+                android:id="@+id/mstcardtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -49,7 +49,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/spacecardtitle1"
+                android:id="@+id/mstcardtitle1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"

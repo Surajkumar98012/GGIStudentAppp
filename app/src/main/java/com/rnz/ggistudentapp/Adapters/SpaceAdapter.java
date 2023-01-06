@@ -48,10 +48,14 @@ public class SpaceAdapter extends RecyclerView.Adapter<SpaceAdapter.SpaceHolder>
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,list.get(position).getnotesTitle(), Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(list.get(position).getPdfUrl()));
+                context.startActivity(intent);
+                Toast.makeText(context, "Downloading", Toast.LENGTH_SHORT).show();
+               /* Toast.makeText(context,list.get(position).getnotesTitle(), Toast.LENGTH_SHORT).show();*/
             }
         });
-        holder.cardImage.setOnClickListener(new View.OnClickListener() {
+/*        holder.cardImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Intent.ACTION_VIEW);
@@ -59,7 +63,7 @@ public class SpaceAdapter extends RecyclerView.Adapter<SpaceAdapter.SpaceHolder>
                 context.startActivity(intent);
                 Toast.makeText(context, "Downloaded", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
     }
 
     @Override
